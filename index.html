@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12-Week Beginner Home Muscle Plan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">Home Muscle Builder</a>
+      <nav class="nav">
+        <a href="#profile">Profile</a>
+        <a href="#plan">12-Week Plan</a>
+        <a href="#videos">Videos</a>
+        <a href="#success">Success</a>
+        <a href="#photos">Photo Progress</a>
+        <a href="#weekly-photos">Upload Photos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge">Beginner • Home Workouts • 12 Weeks</p>
+          <h1>Build measurable muscle at home with a simple, beginner-friendly plan.</h1>
+          <p class="subhead">
+            A practical framework to choose exercises, set frequency, and progress safely using minimal equipment.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="#plan">Jump to the 12-Week Plan</a>
+            <a class="btn btn-ghost" href="#profile">Add Your Profile</a>
+          </div>
+        </div>
+
+        <div class="card hero-card">
+          <h3>Quick Overview</h3>
+          <ul class="checklist">
+            <li><span>✓</span> 3–4 training days per week</li>
+            <li><span>✓</span> Bodyweight + minimal equipment</li>
+            <li><span>✓</span> Progressive overload (simple progression)</li>
+            <li><span>✓</span> Safety-first, beginner pace</li>
+          </ul>
+          <p class="muted small">
+            Tip: Track reps and sets each workout. Small weekly increases add up.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE FORM -->
+    <section id="profile" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Your Profile</h2>
+          <p class="muted">Optional — enter your info to personalize your tracking.</p>
+        </div>
+        <div class="card">
+          <form class="profile-form" id="profileForm">
+            <div class="photo-upload-section">
+              <div class="photo-preview" id="photoPreview">
+                <div class="photo-placeholder" id="photoPlaceholder">
+                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  <p class="muted small">No photo added</p>
+                </div>
+                <img id="profileImage" style="display: none;" alt="Profile photo" />
+              </div>
+              <div class="photo-upload-controls">
+                <label for="photoInput" class="btn btn-small">Choose Photo</label>
+                <input type="file" id="photoInput" accept="image/*" style="display: none;" />
+                <button type="button" class="btn btn-ghost btn-small" id="removePhotoBtn" style="display: none;">Remove Photo</button>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="10" max="100" placeholder="e.g., 28" />
+              </div>
+              <div class="field">
+                <label for="height">Height</label>
+                <div class="height-inputs">
+                  <div class="input-row">
+                    <input id="feet" name="feet" type="number" min="3" max="8" placeholder="5" />
+                    <span class="unit">ft</span>
+                  </div>
+                  <div class="input-row">
+                    <input id="inches" name="inches" type="number" min="0" max="11" placeholder="9" />
+                    <span class="unit">in</span>
+                  </div>
+                </div>
+                <p class="hint">Enter feet and inches separately</p>
+              </div>
+              <div class="field">
+                <label for="weight">Weight</label>
+                <div class="input-row">
+                  <input id="weight" name="weight" type="number" min="50" max="500" placeholder="e.g., 165" />
+                  <span class="unit">lbs</span>
+                </div>
+                <p class="hint">Enter weight in pounds</p>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn" id="saveProfileBtn" type="submit">Save Profile</button>
+              <button class="btn btn-ghost" id="clearInputsBtn" type="reset">Clear Inputs</button>
+              <button class="btn btn-ghost" id="clearSavedBtn" type="button">Clear Saved Profile</button>
+            </div>
+            <div class="saved-box" id="savedBox">
+              <h3>Saved Profile</h3>
+              <p class="muted" id="savedText">No profile saved yet.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12-WEEK PLAN -->
+    <section id="plan" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>12-Week Plan (Week-by-Week)</h2>
+          <p class="muted">
+            Train <strong>3 days/week</strong> (full-body). Optional <strong>4th day</strong> for light cardio + mobility.
+            Progress by adding reps, then sets, then difficulty.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Workout Days (A / B / C)</h3>
+            <p class="muted small">Repeat these each week on non-consecutive days (ex: Mon/Wed/Fri).</p>
+            <div class="plan-block">
+              <h4>Day A</h4>
+              <ul class="bullets">
+                <li>Squat (bodyweight)</li>
+                <li>Push-ups (knee or regular)</li>
+                <li>Glute bridge</li>
+                <li>Plank</li>
+              </ul>
+            </div>
+            <div class="plan-block">
+              <h4>Day B</h4>
+              <ul class="bullets">
+                <li>Reverse lunge</li>
+                <li>Incline push-ups (hands on couch/table)</li>
+                <li>Hip hinge (good morning) or deadlift pattern (backpack)</li>
+                <li>Side plank</li>
+              </ul>
+            </div>
+            <div class="plan-block">
+              <h4>Day C</h4>
+              <ul class="bullets">
+                <li>Step-ups (stairs/bench)</li>
+                <li>Pike push-ups (or incline)</li>
+                <li>Single-leg glute bridge (or regular)</li>
+                <li>Dead bug</li>
+              </ul>
+            </div>
+
+            <div class="mini-callout">
+              <p class="muted small">
+                Minimal equipment options: a backpack (books for weight), a sturdy chair, a towel.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>How to Progress (Simple Rules)</h3>
+            <ul class="bullets">
+              <li><strong>Weeks 1–4:</strong> Add reps each week (same sets).</li>
+              <li><strong>Weeks 5–8:</strong> Add a set when you hit the top of the rep range.</li>
+              <li><strong>Weeks 9–12:</strong> Make moves harder (tempo, pause, backpack weight, harder variation).</li>
+            </ul>
+
+            <div class="mini-callout">
+              <p class="muted small">
+                Effort guide: stop with <strong>1–2 reps left in the tank</strong> on most sets (good form first).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card table-card">
+          <h3>Week-by-Week Progression Table</h3>
+          <p class="muted small">
+            Use the same structure for each workout day's main moves (legs + push + hinge/glutes + core).
+          </p>
+
+          <div class="table-wrap">
+            <table class="plan-table">
+              <thead>
+                <tr>
+                  <th>Week</th>
+                  <th>Sets x Reps (Leg + Push + Hinge/Glute)</th>
+                  <th>Core</th>
+                  <th>Focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>2 x 8</td><td>2 x 20–30s</td><td>Learn form, move slowly</td></tr>
+                <tr><td>2</td><td>2 x 10</td><td>2 x 25–35s</td><td>Add reps, keep form clean</td></tr>
+                <tr><td>3</td><td>2 x 12</td><td>2 x 30–40s</td><td>Full range of motion</td></tr>
+                <tr><td>4</td><td>2 x 14</td><td>2 x 35–45s</td><td>Consistent tempo</td></tr>
+                <tr><td>5</td><td>3 x 8</td><td>3 x 25–35s</td><td>Add a set, controlled reps</td></tr>
+                <tr><td>6</td><td>3 x 10</td><td>3 x 30–40s</td><td>Steady progression</td></tr>
+                <tr><td>7</td><td>3 x 12</td><td>3 x 35–45s</td><td>Improve stability + balance</td></tr>
+                <tr><td>8</td><td>3 x 14</td><td>3 x 40–50s</td><td>Top of rep range</td></tr>
+                <tr><td>9</td><td>3 x 8 (harder variation)</td><td>3 x 30–45s</td><td>Add difficulty (pause/tempo)</td></tr>
+                <tr><td>10</td><td>3 x 10 (harder variation)</td><td>3 x 35–50s</td><td>Add backpack weight if safe</td></tr>
+                <tr><td>11</td><td>3 x 12 (harder variation)</td><td>3 x 40–55s</td><td>Consistency + quality reps</td></tr>
+                <tr><td>12</td><td>3 x 14 (harder variation)</td><td>3 x 45–60s</td><td>Test progress + take photos</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mini-callout">
+            <p class="muted small">
+              Optional 4th day: 20–30 min brisk walking + 10 min mobility (hips, shoulders, ankles).
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Safety & Recovery (Quick)</h3>
+          <ul class="bullets">
+            <li>Warm up 5 minutes (marching in place, arm circles, bodyweight squats).</li>
+            <li>Rest 60–90 seconds between sets.</li>
+            <li>If pain (sharp) shows up, stop and regress the exercise.</li>
+            <li>Sleep and protein matter for muscle growth.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKOUT VIDEOS -->
+    <section id="videos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Workout Video Library</h2>
+          <p class="muted">Learn proper form with step-by-step video demonstrations for each exercise.</p>
+        </div>
+
+        <div class="card">
+          <h3>Why Proper Form Matters</h3>
+          <p>
+            Correct exercise form is crucial for building muscle safely and effectively. These videos demonstrate 
+            the proper technique for each movement in the 12-week plan. Watch them before your first workout and 
+            refer back anytime you need a refresher.
+          </p>
+        </div>
+
+        <div class="video-category">
+          <h3>Day A Exercises</h3>
+          <div class="grid-2">
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/l83R5PblSMA" title="Bodyweight Squat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Bodyweight Squat</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Feet shoulder-width apart, chest up, knees tracking over toes, sit back like sitting in a chair.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/AoxJBoRNFGU" title="Push-ups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Push-ups (Knee or Regular)</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Hands shoulder-width, body in straight line, lower chest to ground, elbows at 45-degree angle.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Hp39axsuFs8" title="Glute Bridge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Glute Bridge</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Lie on back, feet flat, drive through heels, squeeze glutes at top, keep core tight.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/6ONgwzcQIvQ" title="Plank" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Plank</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Forearms on ground, body straight from head to heels, don't let hips sag, breathe steadily.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-category">
+          <h3>Day B Exercises</h3>
+          <div class="grid-2">
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/U9U3gdrFVNc" title="Reverse Lunge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Reverse Lunge</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Step back with one leg, lower back knee toward ground, keep front knee over ankle, push through front heel.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/fQtzc3--TzM" title="Incline Push-ups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Incline Push-ups</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Hands on elevated surface (couch/table), body straight, lower chest to surface, maintain form.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/_672kRUiKWA" title="Hip Hinge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Hip Hinge / Good Morning</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Hinge at hips, slight knee bend, keep back straight, push hips back, feel stretch in hamstrings.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/fhDWB53BHUY" title="Side Plank" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Side Plank</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Balance on forearm and side of foot, body in straight line, hips lifted, engage obliques.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-category">
+          <h3>Day C Exercises</h3>
+          <div class="grid-2">
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/wfhXnLILqdk" title="Step-ups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Step-ups</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Use stairs or bench, drive through heel of elevated leg, stand fully at top, controlled descent.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/XckEEwa1BPI" title="Pike Push-ups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Pike Push-ups</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Hips high in inverted V position, lower head toward ground between hands, push back up, targets shoulders.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/AVAXhy6pl7o" title="Single-leg Glute Bridge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Single-leg Glute Bridge</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> One foot on ground, other leg extended, drive through heel, squeeze glute at top, maintain balance.
+              </p>
+            </div>
+
+            <div class="card video-card">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/g_BYB0R-4Ws" title="Dead Bug" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <h4>Dead Bug</h4>
+              <p class="muted small">
+                <strong>Key points:</strong> Lie on back, extend opposite arm and leg, keep lower back pressed to floor, move slowly and controlled.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card callout">
+          <h3>Video Tips</h3>
+          <ul class="bullets">
+            <li>Watch each video fully before attempting the exercise</li>
+            <li>Start with easier variations if needed (knee push-ups, regular glute bridge)</li>
+            <li>Practice movements slowly to master form before adding speed or intensity</li>
+            <li>Pause and replay sections if you need clarification on any movement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEFINITION OF SUCCESS -->
+    <section id="success" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Definition of Success</h2>
+          <p class="muted">Shared measures the "client" and the "team" agree on.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Quantitative Results</h3>
+            <ul class="bullets">
+              <li>Strength up (e.g., +50% reps on squats / push-ups)</li>
+              <li>Plank improved (target: 60+ seconds)</li>
+              <li>≥85% workout completion over 12 weeks</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Visible Improvement</h3>
+            <ul class="bullets">
+              <li>Progress photos show changes by weeks 8–12</li>
+              <li>Body measurements improve (optional tracking)</li>
+              <li>Better form and control on key movements</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Mindset Shift</h3>
+            <ul class="bullets">
+              <li>Confidence training independently at home</li>
+              <li>Clear understanding of progression</li>
+              <li>Motivation to continue beyond 12 weeks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO PROGRESS -->
+    <section id="photos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Photo Progress</h2>
+          <p class="muted">Track your visual transformation with weekly progress photos.</p>
+        </div>
+
+        <div class="card">
+          <h3>Why Take Progress Photos?</h3>
+          <p>
+            Progress photos are one of the most powerful tools for tracking your transformation. While the scale and measurements 
+            are helpful, photos capture changes in muscle definition, posture, and overall physique that numbers can't show. 
+            They also provide incredible motivation when you compare week 1 to week 12.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Photo Guidelines</h3>
+            <ul class="bullets">
+              <li><strong>Frequency:</strong> Take photos at the end of each week (same day/time)</li>
+              <li><strong>Lighting:</strong> Use consistent, natural lighting if possible</li>
+              <li><strong>Location:</strong> Same spot in your home each time</li>
+              <li><strong>Clothing:</strong> Wear fitted clothing or the same outfit each week</li>
+              <li><strong>Poses:</strong> Front, side, and back views with relaxed posture</li>
+              <li><strong>Time of day:</strong> Morning after waking (consistent hydration state)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>What to Look For</h3>
+            <ul class="bullets">
+              <li>Increased muscle definition in arms, shoulders, and legs</li>
+              <li>Improved posture and body composition</li>
+              <li>Changes in how clothing fits</li>
+              <li>Subtle improvements week-to-week add up over 12 weeks</li>
+              <li>Compare Week 1 vs Week 4 vs Week 8 vs Week 12</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card callout">
+          <h3>Pro Tip: Create a Photo Timeline</h3>
+          <p class="muted">
+            Store your weekly photos in a dedicated folder on your phone. At the end of 12 weeks, create a side-by-side 
+            comparison or video montage to see your complete transformation. This visual record is incredibly motivating 
+            and helps you appreciate the progress you've made.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEKLY PHOTO UPLOAD -->
+    <section id="weekly-photos" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Upload Weekly Progress Photos</h2>
+          <p class="muted">Track your transformation week by week with photos.</p>
+        </div>
+
+        <div class="card">
+          <h3>How It Works</h3>
+          <p class="muted small" style="margin-bottom: 16px;">
+            Select which week you're on and upload your progress photos. You can upload multiple photos 
+            for each week (front view, side view, back view). All photos are stored during your session.
+          </p>
+
+          <div class="week-selector">
+            <label for="weekSelect"><strong>Select Week:</strong></label>
+            <select id="weekSelect" class="week-dropdown">
+              <option value="">Choose a week...</option>
+              <option value="1">Week 1</option>
+              <option value="2">Week 2</option>
+              <option value="3">Week 3</option>
+              <option value="4">Week 4</option>
+              <option value="5">Week 5</option>
+              <option value="6">Week 6</option>
+              <option value="7">Week 7</option>
+              <option value="8">Week 8</option>
+              <option value="9">Week 9</option>
+              <option value="10">Week 10</option>
+              <option value="11">Week 11</option>
+              <option value="12">Week 12</option>
+            </select>
+          </div>
+
+          <div class="photo-upload-area">
+            <label for="progressPhotoInput" class="btn">Choose Photos</label>
+            <input type="file" id="progressPhotoInput" accept="image/*" multiple style="display: none;" />
+            <p class="muted small" style="margin-top: 8px;">You can select multiple photos at once</p>
+          </div>
+
+          <div id="photoGallery" class="photo-gallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="small muted">© 2026 Home Muscle Builder — Beginner Home Strength Framework</p>
+        <p class="small muted">Built with HTML + CSS</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
