@@ -156,27 +156,3 @@ displayProgressPhotos();
 ```
 
 ---
-
-## **How to Upload to GitHub:**
-
-1. Create 3 files in your repository:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-
-2. Copy and paste the code above into each file
-
-3. Upload all 3 files to GitHub
-
-4. Enable GitHub Pages in your repository settings
-
-5. Your website will be live! 🎉
-
----
-
-## **File Structure:**
-```
-your-repo/
-├── index.html
-├── styles.css
-└── script.js
